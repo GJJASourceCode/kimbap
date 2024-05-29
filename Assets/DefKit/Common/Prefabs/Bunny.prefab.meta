@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: a85eb22e2f1cf8a41b21be031229149d
+timeCreated: 1459878094
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 50767
+  packageName: DefKit
+  packageVersion: 0.1
+  assetPath: Assets/DefKit/Common/Prefabs/Bunny.prefab
+  uploadId: 121446

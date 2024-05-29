@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: ab3b61aeb0365d341ba8af4783283c5f
+timeCreated: 1440685394
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 50767
+  packageName: DefKit
+  packageVersion: 0.1
+  assetPath: Assets/DefKit/Prefabs/SphereNode.prefab
+  uploadId: 121446

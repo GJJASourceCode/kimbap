@@ -1,0 +1,19 @@
+fileFormatVersion: 2
+guid: 0f12c9c94243af2469faf0d3a4a527d0
+timeCreated: 1449751488
+licenseType: Store
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 50767
+  packageName: DefKit
+  packageVersion: 0.1
+  assetPath: Assets/DefKit/Scripts/PhysXMeshUpdater.cs
+  uploadId: 121446

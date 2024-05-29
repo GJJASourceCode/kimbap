@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: ca1abf7602192ef479ec27638f29832c
+timeCreated: 1450960055
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 50767
+  packageName: DefKit
+  packageVersion: 0.1
+  assetPath: Assets/DefKit/Common/Materials/GreenMat.mat
+  uploadId: 121446
