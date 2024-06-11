@@ -9,6 +9,13 @@ public class CameraController : MonoBehaviour
 
     private float rotationSpeed = 500f;
 
+    // private PlayerController playerController;
+
+    void Start()
+    {
+        // playerController = FindAnyObjectByType<PlayerController>();
+    }
+
     // Update is called once per frame
     void Update()
     {
@@ -16,7 +23,7 @@ public class CameraController : MonoBehaviour
         {
             CamOrbit();
         }
-        if (Input.GetMouseButtonUp(1))
+        else
         {
             CamReset();
         }
@@ -36,6 +43,10 @@ public class CameraController : MonoBehaviour
 
     private void CamReset()
     {
-        transform.rotation = Quaternion.Euler(0, target.rotation.eulerAngles.y, 0);
+        Debug.Log(Vector3.Cross(Vector3.up, target.right));
+        transform.rotation = Quaternion.LookRotation(
+            Vector3.Cross(target.right, Vector3.up),
+            Vector3.up
+        );
     }
 }

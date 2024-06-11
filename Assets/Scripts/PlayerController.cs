@@ -6,6 +6,7 @@ public class PlayerController : MonoBehaviour
 {
     public float jumpForce;
     public float torque;
+    public float rotationSpeed;
 
     private Rigidbody rb;
     private CapsuleCollider collider;
@@ -24,9 +25,13 @@ public class PlayerController : MonoBehaviour
         {
             rb.AddForce(Vector3.up * jumpForce);
         }
-        rb.AddTorque(
-            new Vector3(Input.GetAxisRaw("Vertical"), 0f, 0f).normalized * torque * Time.deltaTime
-        );
+        rb.AddTorque(transform.right * Input.GetAxisRaw("Vertical") * torque * Time.deltaTime);
+        rb.AddTorque(Vector3.up * Input.GetAxisRaw("Horizontal") * torque * Time.deltaTime);
+        // if (Input.GetAxisRaw("Horizontal") != 0)
+        // {
+        //     float rotation = Input.GetAxisRaw("Horizontal") * rotationSpeed * Time.deltaTime;
+        //     transform.Rotate(Vector3.up, rotation);
+        // }
     }
 
     bool IsGrounded()
