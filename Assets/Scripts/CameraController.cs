@@ -43,7 +43,6 @@ public class CameraController : MonoBehaviour
 
     private void CamReset()
     {
-        Debug.Log(Vector3.Cross(Vector3.up, target.right));
         transform.rotation = Quaternion.LookRotation(
             Vector3.Cross(target.right, Vector3.up),
             Vector3.up
