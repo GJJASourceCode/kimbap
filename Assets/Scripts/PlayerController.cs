@@ -51,7 +51,7 @@ public class PlayerController : MonoBehaviour
         // Define a layer mask for the ground
         int groundLayer = LayerMask.NameToLayer("Watermelon");
         // Define a raycast distance slightly higher than the player's height
-        float raycastDistance = 1f + 0.02f; // Add a small offset to avoid floating-point precision issues
+        float raycastDistance = 1.2f; // Add a small offset to avoid floating-point precision issues
 
         // Perform a raycast downwards from the player's position
         RaycastHit hit;
