@@ -11,6 +11,8 @@ public class PlayerController : MonoBehaviour
     private Rigidbody rb;
     private CapsuleCollider collider;
 
+    private Transform savePoint;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -32,6 +34,13 @@ public class PlayerController : MonoBehaviour
         //     float rotation = Input.GetAxisRaw("Horizontal") * rotationSpeed * Time.deltaTime;
         //     transform.Rotate(Vector3.up, rotation);
         // }
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+            transform.position = savePoint.position + Vector3.up * 5f;
+            rb.angularVelocity = Vector3.zero;
+            rb.velocity = Vector3.zero;
+            transform.rotation = Quaternion.identity;
+        }
     }
 
     bool IsGrounded()
@@ -60,4 +69,12 @@ public class PlayerController : MonoBehaviour
         // If the raycast does not hit the ground, return false
         return false;
     }
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("Save"))
+        {
+            savePoint = other.transform;
+        }
+    }
+    
 }
