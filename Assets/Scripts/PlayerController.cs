@@ -7,11 +7,13 @@ public class PlayerController : MonoBehaviour
     public float jumpForce;
     public float torque;
     public float rotationSpeed;
+    public List<GameObject> textParticles;
 
     private Rigidbody rb;
     private CapsuleCollider collider;
 
     private Transform savePoint;
+
 
     // Start is called before the first frame update
     void Start()
@@ -40,6 +42,7 @@ public class PlayerController : MonoBehaviour
             rb.angularVelocity = Vector3.zero;
             rb.velocity = Vector3.zero;
             transform.rotation = Quaternion.identity;
+            StartCoroutine(ShoeTextParticle());
         }
     }
 
@@ -75,6 +78,14 @@ public class PlayerController : MonoBehaviour
         {
             savePoint = other.transform;
         }
+    }
+
+    IEnumerator ShoeTextParticle()
+    {
+        int index = Random.Range(0, textParticles.Count);
+        GameObject text = Instantiate(textParticles[index], transform.position + Vector3.up * 12, transform.rotation);
+        yield return new WaitForSeconds(0.5f);
+        Destroy(text);
     }
     
 }
