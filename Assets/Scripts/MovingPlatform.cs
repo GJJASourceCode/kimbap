@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEditor;
 
-public enum platformDirection
+public enum PlatformDirection
 {
     x,
     y,
@@ -12,7 +12,7 @@ public enum platformDirection
 
 public class MovingPlatform : MonoBehaviour
 {
-    public platformDirection direction;
+    public PlatformDirection direction;
     public float movementSpeed;
     public float timeToMove;
 
@@ -24,26 +24,26 @@ public class MovingPlatform : MonoBehaviour
     {
         switch (direction)
         {
-            case platformDirection.x:
+            case PlatformDirection.x:
                 break;
-            case platformDirection.y:
+            case PlatformDirection.y:
                 break;
-            case platformDirection.z:
+            case PlatformDirection.z:
                 break;
         }
     }
 
     void Start()
     {
-        if (direction == platformDirection.x)
+        if (direction == PlatformDirection.x)
         {
             directionVector = Vector3.right;
         }
-        else if (direction == platformDirection.y)
+        else if (direction == PlatformDirection.y)
         {
             directionVector = Vector3.up;
         }
-        else if (direction == platformDirection.z)
+        else if (direction == PlatformDirection.z)
         {
             directionVector = Vector3.forward;
         }
