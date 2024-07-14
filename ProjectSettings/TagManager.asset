@@ -7,6 +7,10 @@ TagManager:
   - Watermelon
   - FxTemporaire
   - Save
+  - Black
+  - White
+  - gal1
+  - gal2
   layers:
   - Default
   - TransparentFX
