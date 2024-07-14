@@ -10,7 +10,6 @@ public class PlayerController : MonoBehaviour
     public List<GameObject> textParticles;
 
     private Rigidbody rb;
-    private CapsuleCollider collider;
 
     private Transform savePoint;
 
@@ -19,7 +18,6 @@ public class PlayerController : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody>();
-        collider = GetComponent<CapsuleCollider>();
     }
 
     // Update is called once per frame
@@ -87,5 +85,5 @@ public class PlayerController : MonoBehaviour
         yield return new WaitForSeconds(0.5f);
         Destroy(text);
     }
-    
+
 }
